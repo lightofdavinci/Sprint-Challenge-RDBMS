@@ -29,6 +29,7 @@ exports.up = function(knex) {
         .notNullable()
         .defaultTo(false);
       tbl.text("description");
+      notNullable();
       tbl.text("notes");
     })
     .createTable("project_resources", tbl => {

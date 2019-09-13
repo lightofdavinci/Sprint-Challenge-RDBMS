@@ -1,14 +1,14 @@
 const db = require("../data/db-config.js");
 
 module.exports = {
-  getProjects,
-  addProjects
+  getResources,
+  addResources
 };
 
-function getProjects() {
+function getResources() {
   return db("projects");
 }
 
-function addProjects(projects) {
+function addResourcesprojects) {
   return db("projects").insert(projects, "id");
 }

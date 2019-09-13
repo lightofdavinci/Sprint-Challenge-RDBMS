@@ -1,9 +1,9 @@
 const express = require("express");
 const router = express.Router();
-const Projects = require("./ProjectsModel");
+const Resources = require("./ResourcesModel.js");
 
 router.get("/", (req, res) => {
-  Projects.getProjects()
+  Resources.getResources()
     .then(project => {
       res.status(200).json(project);
     })
@@ -13,10 +13,10 @@ router.get("/", (req, res) => {
 });
 
 router.post("/", (req, res) => {
-  const project = req.body;
-  Projects.addProject(project)
-    .then(proj => {
-      res.status(201).json(proj);
+  const resource = req.body;
+  Resources.addResources(resource)
+    .then(resourc => {
+      res.status(201).json(resourc);
     })
     .catch(err => {
       res.status(500).json(err);
