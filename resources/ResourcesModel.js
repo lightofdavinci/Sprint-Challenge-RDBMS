@@ -6,9 +6,9 @@ module.exports = {
 };
 
 function getResources() {
-  return db("projects");
+  return db("resources");
 }
 
-function addResourcesprojects) {
-  return db("projects").insert(projects, "id");
+function addResources() {
+  return db("resources").insert(projects, "id");
 }

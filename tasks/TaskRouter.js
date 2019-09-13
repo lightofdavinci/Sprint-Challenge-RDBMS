@@ -3,9 +3,9 @@ const router = express.Router();
 const Tasks = require("./TaskModel.js");
 
 router.get("/", (req, res) => {
-  Tasks.getTasks()
-    .then(project => {
-      res.status(200).json(project);
+  Tasks.getTask()
+    .then(tasks => {
+      res.status(200).json(tasks);
     })
     .catch(err => {
       res.status(500).json(err);
@@ -15,8 +15,8 @@ router.get("/", (req, res) => {
 router.post("/", (req, res) => {
   const task = req.body;
   Tasks.addTask(task)
-    .then(resourc => {
-      res.status(201).json(resourc);
+    .then(tasks => {
+      res.status(201).json(tasks);
     })
     .catch(err => {
       res.status(500).json(err);

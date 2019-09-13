@@ -6,7 +6,7 @@ module.exports = {
 };
 
 function getTask() {
-  return db("tasks");
+  return db("tasks").join("projects", "project_id", "=", "projects.id");
 }
 
 function addTask(tasks) {

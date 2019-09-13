@@ -2,7 +2,7 @@ exports.seed = function(knex) {
   // Deletes ALL existing entries
 
   // Inserts seed entries
-  return knex("table_name").insert([
+  return knex("tasks").insert([
     { id: 1, project_id: 1, completed: false, description: "fun times" },
     { id: 2, project_id: 1, completed: false, description: "funnner times" },
     { id: 3, project_id: 1, completed: false, description: "more fun times" },

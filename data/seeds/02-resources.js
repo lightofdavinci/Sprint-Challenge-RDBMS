@@ -2,7 +2,7 @@ exports.seed = function(knex) {
   // Deletes ALL existing entries
 
   // Inserts seed entries
-  return knex("table_name").insert([
+  return knex("resources").insert([
     { id: 1, resourcename: "wax", resourcedescription: "carnuba" },
     { id: 2, resourcename: "paint", resourcedescription: "green" },
     { id: 3, resourcename: "soap", resourcedescription: "minwax" },

@@ -4,10 +4,7 @@ exports.up = function(knex) {
       tbl.increments();
       tbl.string("projectname", 255).notNullable();
       tbl.text("projectdescription");
-      tbl
-        .boolean("completed")
-        .notNullable()
-        .defaultTo(false);
+      tbl.boolean("completed").defaultTo(false);
     })
     .createTable("resources", tbl => {
       tbl.increments();
@@ -24,12 +21,8 @@ exports.up = function(knex) {
         .inTable("projects")
         .onUpdate("CASCADE")
         .onDelete("CASCADE");
-      tbl
-        .boolean("completed")
-        .notNullable()
-        .defaultTo(false);
-      tbl.text("description");
-      notNullable();
+      tbl.boolean("completed").defaultTo(false);
+      tbl.text("description").notNullable();
       tbl.text("notes");
     })
     .createTable("project_resources", tbl => {
