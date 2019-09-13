@@ -38,13 +38,21 @@ Commit your code regularly and use descriptive messages. This helps both you (in
 
 Demonstrate your understanding of this week's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
-- [ ] Explain the difference between `Relational Databases` and `SQL`.
+- [X] Explain the difference between `Relational Databases` and `SQL`.
 
-- [ ] Why do tables need a `primary key`?
+  Relational Databases store data in table form containing columns and rows. SQL is the standard language used when working with Relational DB's allowing us to preform data interations (CRUD)
 
-- [ ] What is the name given to a table column that references the primary key on another table.
+- [X] Why do tables need a `primary key`?
+ 
+  Unique idendifier attached to each row in a database table. 
 
-- [ ] What do we need in order to have a _many to many_ relationship between two tables.
+- [X] What is the name given to a table column that references the primary key on another table.
+
+  A Foreign Key
+
+- [X] What do we need in order to have a _many to many_ relationship between two tables.
+
+  A Composite Key
 
 ## Minimum Viable Product
 
@@ -98,10 +106,10 @@ The API should return:
 
 A `project` is what needs to be done. We want to store the following data about a `project`:
 
-- [ ] a unique Id.
-- [ ] a name. This column is required.
-- [ ] a description.
-- [ ] a boolean that indicates if the project has been completed. This column cannot be NULL, the default value should be `false`.
+- [X] a unique Id.
+- [X] a name. This column is required.
+- [X] a description.
+- [X] a boolean that indicates if the project has been completed. This column cannot be NULL, the default value should be `false`.
 
 A `resource` is anything needed to complete a project, some examples are: a person, a tool, a meeting room or a software license. We want to store the following data about a `resource`:
 
