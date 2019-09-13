@@ -49,7 +49,7 @@ exports.up = function(knex) {
             .inTable('projects')
             .onDelete('RESTRICT')
             .onUpdate('CASCADE');
-    }) 
+    })  
 };
 
 exports.down = function(knex) {
