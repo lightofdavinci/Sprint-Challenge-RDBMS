@@ -9,9 +9,9 @@ router.get("/", (req, res) => {
         if (newtasks.completed === 0) {
           newtasks.completed = false;
         } else {
-          newproject.completed = true;
+          newtasks.completed = true;
         }
-        return newproject;
+        return newtasks;
       });
       res.status(200).json(tasks);
     })
