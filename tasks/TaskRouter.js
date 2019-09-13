@@ -5,6 +5,14 @@ const Tasks = require("./TaskModel.js");
 router.get("/", (req, res) => {
   Tasks.getTask()
     .then(tasks => {
+      tasks.map(newtasks => {
+        if (newtasks.completed === 0) {
+          newtasks.completed = false;
+        } else {
+          newproject.completed = true;
+        }
+        return newproject;
+      });
       res.status(200).json(tasks);
     })
     .catch(err => {

@@ -5,6 +5,14 @@ const Projects = require("./ProjectsModel");
 router.get("/", (req, res) => {
   Projects.getProjects()
     .then(project => {
+      project.map(newproject => {
+        if (newproject.completed === 0) {
+          newproject.completed = false;
+        } else {
+          newproject.completed = true;
+        }
+        return newproject;
+      });
       res.status(200).json(project);
     })
     .catch(err => {
